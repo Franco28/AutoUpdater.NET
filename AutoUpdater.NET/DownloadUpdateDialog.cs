@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Net;
@@ -15,16 +16,31 @@ namespace AutoUpdaterDotNET
     internal partial class DownloadUpdateDialog : Form
     {
         private readonly UpdateInfoEventArgs _args;
-
+        private readonly SettingsMng oConfigMng = new SettingsMng();
         private string _tempFile;
-
         private MyWebClient _webClient;
-
         private DateTime _startedAt;
 
         public DownloadUpdateDialog(UpdateInfoEventArgs args)
         {
             InitializeComponent();
+            oConfigMng.LoadConfig();
+            if (oConfigMng.Config.ToolTheme == "light")
+            {
+                this.BackColor = Color.FromArgb(255, 255, 255);
+                this.ForeColor = Color.FromArgb(38, 38, 38);
+
+                labelInformation.BackColor = pictureBoxIcon.BackColor = Color.FromArgb(255, 255, 255);
+                labelInformation.ForeColor = Color.FromArgb(38, 38, 38);
+            }
+            if (oConfigMng.Config.ToolTheme == "dark")
+            {
+                this.BackColor = Color.FromArgb(38, 38, 38);
+                this.ForeColor = Color.FromArgb(250, 232, 232);
+
+                labelInformation.BackColor = pictureBoxIcon.BackColor = Color.FromArgb(38, 38, 38);
+                labelInformation.ForeColor = Color.FromArgb(250, 232, 232);
+            }
 
             _args = args;
 

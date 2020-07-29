@@ -10,12 +10,38 @@ namespace AutoUpdaterDotNET
 {
     internal partial class UpdateForm : Form
     {
+        private readonly SettingsMng oConfigMng = new SettingsMng();
         private readonly UpdateInfoEventArgs _args;
 
         public UpdateForm(UpdateInfoEventArgs args)
         {
             _args = args;
             InitializeComponent();
+            oConfigMng.LoadConfig();
+            if (oConfigMng.Config.ToolTheme == "light")
+            {
+                this.BackColor = Color.FromArgb(255, 255, 255);
+                this.ForeColor = Color.FromArgb(38, 38, 38);
+
+                labelUpdate.BackColor = labelDescription.BackColor = labelReleaseNotes.BackColor = pictureBoxIcon.BackColor = Color.FromArgb(255, 255, 255);
+                labelUpdate.ForeColor = labelDescription.ForeColor = labelReleaseNotes.ForeColor = Color.FromArgb(38, 38, 38);
+
+                buttonSkip.FlatStyle = buttonRemindLater.FlatStyle = buttonUpdate.FlatStyle = FlatStyle.Standard;
+                buttonSkip.BackColor = buttonRemindLater.BackColor = buttonUpdate.BackColor = Color.FromArgb(255, 255, 255);
+                buttonSkip.ForeColor = buttonRemindLater.ForeColor = buttonUpdate.ForeColor = Color.FromArgb(38, 38, 38);
+            }
+            if (oConfigMng.Config.ToolTheme == "dark")
+            {
+                this.BackColor = Color.FromArgb(38, 38, 38);
+                this.ForeColor = Color.FromArgb(250, 232, 232);
+
+                labelUpdate.BackColor = labelDescription.BackColor = labelReleaseNotes.BackColor = pictureBoxIcon.BackColor = Color.FromArgb(38, 38, 38);
+                labelUpdate.ForeColor = labelDescription.ForeColor = labelReleaseNotes.ForeColor = Color.FromArgb(250, 232, 232);
+
+                buttonSkip.FlatStyle = buttonRemindLater.FlatStyle = buttonUpdate.FlatStyle = FlatStyle.Flat;
+                buttonSkip.BackColor = buttonRemindLater.BackColor = buttonUpdate.BackColor = Color.FromArgb(38, 38, 38);
+                buttonSkip.ForeColor = buttonRemindLater.ForeColor = buttonUpdate.ForeColor = Color.FromArgb(250, 232, 232);
+            }
             UseLatestIE();
             buttonSkip.Visible = AutoUpdater.ShowSkipButton;
             buttonRemindLater.Visible = AutoUpdater.ShowRemindLaterButton;
