@@ -31,55 +31,14 @@ namespace AutoUpdaterDotNET
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateForm));
-            this.webBrowser = new System.Windows.Forms.WebBrowser();
-            this.labelUpdate = new System.Windows.Forms.Label();
-            this.labelDescription = new System.Windows.Forms.Label();
-            this.labelReleaseNotes = new System.Windows.Forms.Label();
-            this.buttonUpdate = new System.Windows.Forms.Button();
-            this.buttonRemindLater = new System.Windows.Forms.Button();
             this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
-            this.buttonSkip = new System.Windows.Forms.Button();
+            this.buttonUpdate = new MaterialSkin.Controls.MaterialButton();
+            this.labelUpdate = new MaterialSkin.Controls.MaterialLabel();
+            this.labelDescription = new MaterialSkin.Controls.MaterialLabel();
+            this.labelReleaseNotes = new MaterialSkin.Controls.MaterialLabel();
+            this.webBrowser = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.SuspendLayout();
-            // 
-            // webBrowser
-            // 
-            resources.ApplyResources(this.webBrowser, "webBrowser");
-            this.webBrowser.Name = "webBrowser";
-            this.webBrowser.ScriptErrorsSuppressed = true;
-            // 
-            // labelUpdate
-            // 
-            resources.ApplyResources(this.labelUpdate, "labelUpdate");
-            this.labelUpdate.Name = "labelUpdate";
-            // 
-            // labelDescription
-            // 
-            resources.ApplyResources(this.labelDescription, "labelDescription");
-            this.labelDescription.Name = "labelDescription";
-            // 
-            // labelReleaseNotes
-            // 
-            resources.ApplyResources(this.labelReleaseNotes, "labelReleaseNotes");
-            this.labelReleaseNotes.Name = "labelReleaseNotes";
-            // 
-            // buttonUpdate
-            // 
-            resources.ApplyResources(this.buttonUpdate, "buttonUpdate");
-            this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonUpdate.Image = global::AutoUpdaterDotNET.Properties.Resources.download;
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.UseVisualStyleBackColor = true;
-            this.buttonUpdate.Click += new System.EventHandler(this.ButtonUpdateClick);
-            // 
-            // buttonRemindLater
-            // 
-            resources.ApplyResources(this.buttonRemindLater, "buttonRemindLater");
-            this.buttonRemindLater.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRemindLater.Image = global::AutoUpdaterDotNET.Properties.Resources.clock_go;
-            this.buttonRemindLater.Name = "buttonRemindLater";
-            this.buttonRemindLater.UseVisualStyleBackColor = true;
-            this.buttonRemindLater.Click += new System.EventHandler(this.ButtonRemindLaterClick);
             // 
             // pictureBoxIcon
             // 
@@ -88,30 +47,70 @@ namespace AutoUpdaterDotNET
             this.pictureBoxIcon.Name = "pictureBoxIcon";
             this.pictureBoxIcon.TabStop = false;
             // 
-            // buttonSkip
+            // buttonUpdate
             // 
-            resources.ApplyResources(this.buttonSkip, "buttonSkip");
-            this.buttonSkip.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSkip.DialogResult = System.Windows.Forms.DialogResult.Abort;
-            this.buttonSkip.Image = global::AutoUpdaterDotNET.Properties.Resources.hand_point;
-            this.buttonSkip.Name = "buttonSkip";
-            this.buttonSkip.UseVisualStyleBackColor = true;
-            this.buttonSkip.Click += new System.EventHandler(this.ButtonSkipClick);
+            resources.ApplyResources(this.buttonUpdate, "buttonUpdate");
+            this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonUpdate.Depth = 0;
+            this.buttonUpdate.DrawShadows = true;
+            this.buttonUpdate.HighEmphasis = false;
+            this.buttonUpdate.Icon = null;
+            this.buttonUpdate.Image = global::AutoUpdaterDotNET.Properties.Resources.download_32;
+            this.buttonUpdate.MouseState = MaterialSkin.MouseState.HOVER;
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.buttonUpdate.UseAccentColor = true;
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.ButtonUpdateClick);
+            // 
+            // labelUpdate
+            // 
+            resources.ApplyResources(this.labelUpdate, "labelUpdate");
+            this.labelUpdate.Depth = 0;
+            this.labelUpdate.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.labelUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelUpdate.HighEmphasis = true;
+            this.labelUpdate.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelUpdate.Name = "labelUpdate";
+            this.labelUpdate.UseAccent = true;
+            // 
+            // labelDescription
+            // 
+            resources.ApplyResources(this.labelDescription, "labelDescription");
+            this.labelDescription.Depth = 0;
+            this.labelDescription.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            this.labelDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelDescription.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelDescription.Name = "labelDescription";
+            // 
+            // labelReleaseNotes
+            // 
+            resources.ApplyResources(this.labelReleaseNotes, "labelReleaseNotes");
+            this.labelReleaseNotes.Depth = 0;
+            this.labelReleaseNotes.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.labelReleaseNotes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelReleaseNotes.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelReleaseNotes.Name = "labelReleaseNotes";
+            this.labelReleaseNotes.UseAccent = true;
+            // 
+            // webBrowser
+            // 
+            resources.ApplyResources(this.webBrowser, "webBrowser");
+            this.webBrowser.BackColor = System.Drawing.Color.White;
+            this.webBrowser.ForeColor = System.Drawing.Color.Black;
+            this.webBrowser.Name = "webBrowser";
+            this.webBrowser.ReadOnly = true;
             // 
             // UpdateForm
             // 
-            this.AcceptButton = this.buttonUpdate;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBoxIcon);
+            this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.labelReleaseNotes);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelUpdate);
-            this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.buttonUpdate);
-            this.Controls.Add(this.buttonSkip);
-            this.Controls.Add(this.buttonRemindLater);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Controls.Add(this.pictureBoxIcon);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UpdateForm";
@@ -124,15 +123,11 @@ namespace AutoUpdaterDotNET
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonRemindLater;
-        private System.Windows.Forms.Button buttonUpdate;
-        private System.Windows.Forms.Button buttonSkip;
-        private System.Windows.Forms.WebBrowser webBrowser;
-        private System.Windows.Forms.Label labelUpdate;
-        private System.Windows.Forms.Label labelDescription;
-        private System.Windows.Forms.Label labelReleaseNotes;
         private System.Windows.Forms.PictureBox pictureBoxIcon;
-
+        private MaterialSkin.Controls.MaterialButton buttonUpdate;
+        private MaterialSkin.Controls.MaterialLabel labelUpdate;
+        private MaterialSkin.Controls.MaterialLabel labelDescription;
+        private MaterialSkin.Controls.MaterialLabel labelReleaseNotes;
+        private System.Windows.Forms.RichTextBox webBrowser;
     }
 }

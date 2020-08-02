@@ -10,11 +10,14 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using AutoUpdaterDotNET.Properties;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace AutoUpdaterDotNET
 {
-    internal partial class DownloadUpdateDialog : Form
+    internal partial class DownloadUpdateDialog : MaterialForm
     {
+        private readonly MaterialSkinManager materialSkinManager;
         private readonly UpdateInfoEventArgs _args;
         private readonly SettingsMng oConfigMng = new SettingsMng();
         private string _tempFile;
@@ -24,22 +27,22 @@ namespace AutoUpdaterDotNET
         public DownloadUpdateDialog(UpdateInfoEventArgs args)
         {
             InitializeComponent();
+
+            materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.EnforceBackcolorOnAllComponents = true;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+
             oConfigMng.LoadConfig();
             if (oConfigMng.Config.ToolTheme == "light")
             {
-                this.BackColor = Color.FromArgb(255, 255, 255);
-                this.ForeColor = Color.FromArgb(38, 38, 38);
-
-                labelInformation.BackColor = pictureBoxIcon.BackColor = Color.FromArgb(255, 255, 255);
-                labelInformation.ForeColor = Color.FromArgb(38, 38, 38);
+                materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+                materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue400, Primary.Blue500, Primary.Blue700, Accent.LightBlue700, TextShade.WHITE);
             }
             if (oConfigMng.Config.ToolTheme == "dark")
             {
-                this.BackColor = Color.FromArgb(38, 38, 38);
-                this.ForeColor = Color.FromArgb(250, 232, 232);
-
-                labelInformation.BackColor = pictureBoxIcon.BackColor = Color.FromArgb(38, 38, 38);
-                labelInformation.ForeColor = Color.FromArgb(250, 232, 232);
+                materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+                materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
             }
 
             _args = args;

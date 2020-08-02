@@ -30,15 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DownloadUpdateDialog));
             this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.labelInformation = new System.Windows.Forms.Label();
-            this.labelSize = new System.Windows.Forms.Label();
+            this.progressBar = new MaterialSkin.Controls.MaterialProgressBar();
+            this.labelInformation = new MaterialSkin.Controls.MaterialLabel();
+            this.labelSize = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxIcon
             // 
-            this.pictureBoxIcon.Image = global::AutoUpdaterDotNET.Properties.Resources.download_32;
             resources.ApplyResources(this.pictureBoxIcon, "pictureBoxIcon");
             this.pictureBoxIcon.Name = "pictureBoxIcon";
             this.pictureBoxIcon.TabStop = false;
@@ -46,16 +45,25 @@
             // progressBar
             // 
             resources.ApplyResources(this.progressBar, "progressBar");
+            this.progressBar.Depth = 0;
+            this.progressBar.MouseState = MaterialSkin.MouseState.HOVER;
             this.progressBar.Name = "progressBar";
             // 
             // labelInformation
             // 
             resources.ApplyResources(this.labelInformation, "labelInformation");
+            this.labelInformation.Depth = 0;
+            this.labelInformation.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            this.labelInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelInformation.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelInformation.Name = "labelInformation";
             // 
             // labelSize
             // 
             resources.ApplyResources(this.labelSize, "labelSize");
+            this.labelSize.Depth = 0;
+            this.labelSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelSize.MouseState = MaterialSkin.MouseState.HOVER;
             this.labelSize.Name = "labelSize";
             // 
             // DownloadUpdateDialog
@@ -66,7 +74,6 @@
             this.Controls.Add(this.labelInformation);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.pictureBoxIcon);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DownloadUpdateDialog";
@@ -81,8 +88,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxIcon;
-        private System.Windows.Forms.ProgressBar progressBar;
-        private System.Windows.Forms.Label labelInformation;
-        private System.Windows.Forms.Label labelSize;
+        private MaterialSkin.Controls.MaterialProgressBar progressBar;
+        private MaterialSkin.Controls.MaterialLabel labelInformation;
+        private MaterialSkin.Controls.MaterialLabel labelSize;
     }
 }
