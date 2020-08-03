@@ -34,10 +34,11 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <OutputPath>..\..\MotoBootLogoMaker-MaterialUI\MotoBootLogoMaker\Setup\</OutputPath>
+    <OutputPath>..\..\MotoBootLogoMaker\Setup\engine\</OutputPath>
     <DocumentationFile>
     </DocumentationFile>
     <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -99,7 +100,7 @@
   </Choose>
   <ItemGroup>
     <Reference Include="MaterialSkin">
-      <HintPath>..\..\MotoBootLogoMaker-MaterialUI\MotoBootLogoMaker\Setup\MaterialSkin.dll</HintPath>
+      <HintPath>..\..\MotoBootLogoMaker\Setup\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -126,12 +127,6 @@
     </Compile>
     <Compile Include="ParseUpdateInfoEventArgs.cs" />
     <Compile Include="RegistryPersistenceProvider.cs" />
-    <Compile Include="RemindLaterForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RemindLaterForm.Designer.cs">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="SettingsMng.cs" />
     <Compile Include="UpdateForm.cs">
@@ -231,67 +226,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.zh.resx" />
     <EmbeddedResource Include="Properties\Resources.zh-tw.resx" />
-    <EmbeddedResource Include="RemindLaterForm.ar.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.da.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.de.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.es.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.fr.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.it.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.ja-JP.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.ko.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.nl.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.pl.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.pt.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.pt-BR.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.ru.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.sk.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.sv.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.tr.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.zh.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.zh-tw.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RemindLaterForm.th.resx">
-      <DependentUpon>RemindLaterForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="UpdateForm.ar.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,9 +295,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="build\Autoupdater.NET.Official.nuspec">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

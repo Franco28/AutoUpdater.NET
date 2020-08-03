@@ -19,7 +19,7 @@ namespace AutoUpdaterDotNET
         {
             try
             {
-                var settingspath = "C:\\MotoLogoMaker\\";
+                var settingspath = "C:\\MotoBootLogoMaker\\";
                 if (File.Exists(settingspath + m_sConfigFileName))
                 {
                     StreamReader srReader = File.OpenText(settingspath + m_sConfigFileName);
@@ -41,7 +41,7 @@ namespace AutoUpdaterDotNET
         {
             try
             {
-                var settingspath = "C:\\MotoLogoMaker\\";
+                var settingspath = "C:\\MotoBootLogoMaker\\";
                 StreamWriter swWriter = File.CreateText(settingspath + m_sConfigFileName);
                 Type tType = m_oConfig.GetType();
                 if (tType.IsSerializable)

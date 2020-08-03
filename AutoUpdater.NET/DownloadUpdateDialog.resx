@@ -257,7 +257,7 @@
 </value>
   </data>
   <data name="pictureBoxIcon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 77</value>
+    <value>13, 77</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBoxIcon.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
