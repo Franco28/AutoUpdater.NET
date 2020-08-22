@@ -1,0 +1,11 @@
+C:\Users\gabri\Desktop\AutoUpdater.NET\ZipExtractor\bin\Debug\net20\ZipExtractor.exe.config
+C:\Users\gabri\Desktop\AutoUpdater.NET\ZipExtractor\bin\Debug\net20\ZipExtractor.exe
+C:\Users\gabri\Desktop\AutoUpdater.NET\ZipExtractor\bin\Debug\net20\ZipExtractor.pdb
+C:\Users\gabri\Desktop\AutoUpdater.NET\ZipExtractor\bin\Debug\net20\ZipStorer.dll
+C:\Users\gabri\Desktop\AutoUpdater.NET\ZipExtractor\obj\Debug\ZipExtractor.FormMain.resources
+C:\Users\gabri\Desktop\AutoUpdater.NET\ZipExtractor\obj\Debug\ZipExtractor.Properties.Resources.resources
+C:\Users\gabri\Desktop\AutoUpdater.NET\ZipExtractor\obj\Debug\ZipExtractor.csproj.GenerateResource.cache
+C:\Users\gabri\Desktop\AutoUpdater.NET\ZipExtractor\obj\Debug\ZipExtractor.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Desktop\AutoUpdater.NET\ZipExtractor\obj\Debug\ZipExtractor.csproj.CopyComplete
+C:\Users\gabri\Desktop\AutoUpdater.NET\ZipExtractor\obj\Debug\ZipExtractor.exe
+C:\Users\gabri\Desktop\AutoUpdater.NET\ZipExtractor\obj\Debug\ZipExtractor.pdb
