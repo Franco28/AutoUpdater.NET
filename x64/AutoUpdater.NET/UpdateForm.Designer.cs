@@ -59,26 +59,26 @@ namespace AutoUpdaterDotNET
             // labelUpdate
             // 
             resources.ApplyResources(this.labelUpdate, "labelUpdate");
-            this.labelUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.labelUpdate.Name = "labelUpdate";
             // 
             // labelDescription
             // 
             resources.ApplyResources(this.labelDescription, "labelDescription");
-            this.labelDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.labelDescription.Name = "labelDescription";
             // 
             // labelReleaseNotes
             // 
             resources.ApplyResources(this.labelReleaseNotes, "labelReleaseNotes");
-            this.labelReleaseNotes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelReleaseNotes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.labelReleaseNotes.Name = "labelReleaseNotes";
             // 
             // webBrowser
             // 
             resources.ApplyResources(this.webBrowser, "webBrowser");
-            this.webBrowser.BackColor = System.Drawing.Color.White;
-            this.webBrowser.ForeColor = System.Drawing.Color.Black;
+            this.webBrowser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.webBrowser.ForeColor = System.Drawing.Color.Red;
             this.webBrowser.Name = "webBrowser";
             this.webBrowser.ReadOnly = true;
             // 
@@ -86,12 +86,14 @@ namespace AutoUpdaterDotNET
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.labelReleaseNotes);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelUpdate);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.pictureBoxIcon);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UpdateForm";

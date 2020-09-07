@@ -51,23 +51,26 @@
             // labelInformation
             // 
             resources.ApplyResources(this.labelInformation, "labelInformation");
-            this.labelInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.labelInformation.Name = "labelInformation";
             // 
             // labelSize
             // 
             resources.ApplyResources(this.labelSize, "labelSize");
-            this.labelSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.labelSize.Name = "labelSize";
             // 
             // DownloadUpdateDialog
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.Controls.Add(this.labelSize);
             this.Controls.Add(this.labelInformation);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.pictureBoxIcon);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DownloadUpdateDialog";

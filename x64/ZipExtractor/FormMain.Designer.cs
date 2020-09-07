@@ -59,8 +59,9 @@
             // 
             // textBoxInformation
             // 
-            this.textBoxInformation.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.textBoxInformation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxInformation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.textBoxInformation.Location = new System.Drawing.Point(96, 20);
             this.textBoxInformation.Name = "textBoxInformation";
             this.textBoxInformation.Size = new System.Drawing.Size(514, 16);
@@ -72,12 +73,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(624, 100);
             this.Controls.Add(this.textBoxInformation);
             this.Controls.Add(this.pictureBoxIcon);
             this.Controls.Add(this.progressBar);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

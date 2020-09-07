@@ -16,7 +16,6 @@ namespace AutoUpdaterDotNET
     internal partial class DownloadUpdateDialog : Form
     {
         private readonly UpdateInfoEventArgs _args;
-        private readonly SettingsMng oConfigMng = new SettingsMng();
         private string _tempFile;
         private MyWebClient _webClient;
         private DateTime _startedAt;
@@ -24,24 +23,6 @@ namespace AutoUpdaterDotNET
         public DownloadUpdateDialog(UpdateInfoEventArgs args)
         {
             InitializeComponent();
-
-            oConfigMng.LoadConfig();
-            if (oConfigMng.Config.ToolTheme == "light")
-            {
-                this.BackColor = Color.FromArgb(250, 232, 232);
-                this.ForeColor = Color.FromArgb(38, 38, 38);
-
-                pictureBoxIcon.BackColor = labelSize.BackColor = labelInformation.BackColor = Color.FromArgb(250, 232, 232);
-                labelSize.ForeColor = labelInformation.ForeColor = Color.FromArgb(38, 38, 38);
-            }
-            if (oConfigMng.Config.ToolTheme == "dark")
-            {
-                this.BackColor = Color.FromArgb(38, 38, 38);
-                this.ForeColor = Color.FromArgb(250, 232, 232);
-
-                pictureBoxIcon.BackColor = labelSize.BackColor = labelInformation.BackColor = Color.FromArgb(38, 38, 38);
-                labelSize.ForeColor = labelInformation.ForeColor = Color.FromArgb(250, 232, 232);
-            }
 
             _args = args;
 

@@ -156,8 +156,6 @@
     </Compile>
     <Compile Include="ParseUpdateInfoEventArgs.cs" />
     <Compile Include="RegistryPersistenceProvider.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="SettingsMng.cs" />
     <Compile Include="UpdateForm.cs">
       <SubType>Form</SubType>
     </Compile>
